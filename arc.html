@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <title>Seguritech</title>
+</head>
+<body>
+    <header class="contenedor img">
+        <div>
+            <h1>
+                <a href="inicio.html">seguritech</a>
+            </h1>
+        </div>
+        <div>
+            <nav>
+                <a class="enlaces" href="inicio.html">inicio</a>
+                <a class="enlaces" href="empleados.html">empleados</a>
+                <a class="enlaces" href="resumenMensual.html">resumen mensual</a>
+                <a class="enlaces" href="resumenSemanal.html">resumen semanal</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h2>Empresa Arc</h2>
+
+        <button id="showformem" class="btn">Agregar Empleado</button>
+        <div id="guartabla">
+            <div class="empleado-form" id="empleadoformcontenedor" style="display:none;">
+                <h2 class="formbtn">Agregar Empleado</h2>
+                <form id="formempleados">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Nombre del Empleado" required>
+                    
+                    <label for="sumarhoras">Sumar Horas:</label>
+                    <div id="sumarhoras">
+                        <input type="number" id="horas" placeholder="Horas">
+                        <button type="button" id="addHoraBtn">Agregar Hora</button>
+                    </div>
+                    
+                    <label for="horastrabajadas">Horas Trabajadas:</label>
+                    <input type="number" id="horastrabajadas" name="horastrabajadas" autocomplete="horastrabajadas" placeholder="Total de Horas" readonly required>
+                    
+                    <label for="pagoporhora">Pago por Hora:</label>
+                    <input type="number" id="pagoporhora" name="pagoporhora" autocomplete="pagoporhora" placeholder="Pago por Hora" required>
+
+                    <label for="pagoempresa">Pago por Hora de la Empresa:</label>
+                    <input type="number" id="pagoempresa" name="pagoempresa" autocomplete="pagoempresa" placeholder="Pago por Hora de la Empresa" required>
+
+                    <button id="botonAgregar" type="submit">Agregar Empleado</button>
+                </form>
+            </div>
+            <p>Cantidad de Empleados: <span id="contadorempleados">0</span></p>
+
+            <table id="datatabla">
+                <thead>
+                    <tr>
+                        <th>Empleados</th>
+                        <th>Horas Trabajadas</th>
+                        <th>Salario</th>
+                        <th>Total Ingresos</th>
+                        <th>Total Ganancias</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaempleado">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Totales</td>
+                        <td id="totalSalary">0.00</td>
+                        <td id="totalIngresos">0.00</td>
+                        <td id="totalGanancias">0.00</td>
+                        <td></td> <!-- Columna vacía para botones de acciones -->
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="java/j4.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <title>Seguritech</title>
+</head>
+<body>
+    <header class="contenedor">
+        <div>
+            <h1>
+                <a href="inicio.html">seguritech</a>
+            </h1>
+        </div>
+        <div>
+            <nav>
+                <a class="enlaces" href="inicio.html">inicio</a>
+                <a class="enlaces" href="empleados.html">empleados</a>
+                <a class="enlaces" href="resumenMensual.html">resumen mensual</a>
+                <a class="enlaces" href="resumenSemanal.html">resumen semanal</a>
+            </nav>
+        </div>
+      
+    </header>
+    <main>
+        <h2>Total Empleados</h2>
+        <button id="showformem" class="btn">Agregar Empleado</button>
+        <div id="guartabla">
+            <div class="empleado-form" id="empleadoformcontenedor" style="display:none;">
+                <h2 class="formbtn">Agregar Empleado</h2>
+                <form id="formempleados">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Nombre del Empleado" required>
+                    <button id="botonAgregar" type="submit">Agregar Empleado</button>
+                </form>
+            </div>
+            <p>Cantidad de Empleados: <span id="contadorempleados">0</span></p>
+
+            <table id="datatabla">
+                <thead>
+                    <tr>
+                        <th>Empleados</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaempleado">
+                    
+                </tbody>
+            </table>
+        </div>
+     </main>
+
+    <footer>
+
+    </footer>
+
+
+<script src="java/j2.js"></script>
+
+</body>
+</html>
